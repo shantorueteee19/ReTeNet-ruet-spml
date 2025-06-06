@@ -19,8 +19,8 @@ histories = []
 # Lists to store true labels and predicted probabilities for ROC AUC calculation
 all_y_true = []
 all_y_pred_prob = []
-#RUET SPML 19 subjects
-sub = [f'{i}' for i in range(1,20)] #add sub_file names
+#WESAD 15 subjects
+sub = [f"{i}" for i in range(2, 18) if i not in {12}] #add sub_file names
 # Loop over each fold
 for test_sub in sub:
     df_train = pd.DataFrame()
