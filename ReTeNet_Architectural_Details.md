@@ -256,8 +256,171 @@
     </tr>
   </table>
 <p align="justify">
-  Subsequently, the remaining processing steps follow the structure of standard transformer architectures.
+  Subsequently, the remaining processing steps follow the structure of standard transformer architectures and yield <i>h<sub>2</sub></i>.
 </p>
-
-  
+<p align="justify">
+  Finally, <i>h<sub>2</sub></i> is passed through an MRCNN block consisting of two parallel paths—one employing a large kernel size and the other using a small kernel size—to capture multi-resolution features. The outputs of both paths are then concatenated. An identical MRCNN block is also utilized in the transformer encoder path. The specifications are detailed in Table 8 and Table 9 respectively.
+</p>
+<table>
+  <caption><b>Table 8:</b> Specifications of the MRCNN path with large kernel path.</caption>
+  <tr>
+    <th>Layer</th> <th>Filters</th> <th>Kernel Size</th> <th>Strides</th> <th>Activation</th>
+  </tr>
+  <tr>
+    <td>Conv1D</td> <td>16</td> <td>21</td> <td>4</td> <td>ReLU</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td> <td>-</td> <td>3</td> <td>1</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td> <td>-</td> <td>0.3</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Conv1D</td> <td>32</td> <td>7</td> <td>1</td> <td>ReLU</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td> <td>-</td> <td>3</td> <td>1</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td> <td>-</td> <td>0.3</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Conv1D</td> <td>16</td> <td>3</td> <td>1</td> <td>ReLU</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td> <td>-</td> <td>3</td> <td>1</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td> <td>-</td> <td>0.3</td> <td>-</td> <td>-</td>
+  </tr>
+</table>
+<table>
+  <caption><b>Table 9:</b> Specifications of the MRCNN path with small kernel path.</caption>
+  <tr>
+    <th>Layer</th> <th>Filters</th> <th>Kernel Size</th> <th>Strides</th> <th>Activation</th>
+  </tr>
+  <tr>
+    <td>Conv1D</td> <td>16</td> <td>3</td> <td>4</td> <td>ReLU</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td> <td>-</td> <td>3</td> <td>1</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td> <td>-</td> <td>0.3</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Conv1D</td> <td>32</td> <td>5</td> <td>1</td> <td>ReLU</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td> <td>-</td> <td>3</td> <td>1</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td> <td>-</td> <td>0.3</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Conv1D</td> <td>16</td> <td>3</td> <td>1</td> <td>ReLU</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td> <td>-</td> <td>3</td> <td>1</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td> <td>-</td> <td>0.3</td> <td>-</td> <td>-</td>
+  </tr>
+</table>
+  <p align="justify">
+ The MRCNN yields <i>h<sub>re</sub></i> for further processing.
+</p>
+<p align="justify">
+ The transformer encoder path consists of three encoders, where the encoder-1 comprises a multihead cross attention (MHCA) layer unlike other two encoders multihead self attention (MHSA). The encoders posseses a same number of dimensions and heads. The parameters are summarized in Table 10.
+</p>
+<table>
+  <caption><b>Table 9:</b> Specifications of the MRCNN path with small kernel path.</caption>
+  <tr>
+    <th>Component</th> <th>Dimension/Unit</th> <th>head</th> <th>Activation</th>
+  </tr>
+  <tr>
+    <td>MHCA</td> <td>16</td> <th>4</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>MHSA</td> <td>16</td> <th>4</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dense</td> <td>16</td> <th>-</td> <td>-</td>
+  </tr>
+</table>
+<p align="justify">
+  The remaining processes are clearly illustrated in Fig. 1 of the main manuscript. 
+  The outputs from each encoder are concatenated and passed through an MRCNN block, producing <i>h<sub>te</sub></i>. 
+  This is then concatenated with <i>h<sub>re</sub></i> and forwarded to the classification stage for final prediction.
+</p>
+<h3 align="center">Classification Stage</h3>
+<p align="justify">
+  The detailed insights into the classification stage are summarized in Table 11.
+</p>
+<table>
+  <caption><b>Table 11:</b> Specifications of the Classification Stage.</caption>
+  <tr>
+    <th>Layer</th> <th>Filters/Units</th> <th>Kernel Size / Pool Size</th> <th>Strides</th> <th>Activation</th>
+  </tr>
+  <tr>
+    <td>Conv1D</td> <td>64</td> <td>3</td> <td>1</td> <td>ReLU</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td> <td>-</td> <td>2</td> <td>2</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td> <td>-</td> <td>0.3</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Conv1D</td> <td>32</td> <td>3</td> <td>1</td> <td>ReLU</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td> <td>-</td> <td>2</td> <td>2</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td> <td>-</td> <td>0.3</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Conv1D</td> <td>16</td> <td>3</td> <td>1</td> <td>ReLU</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td> <td>-</td> <td>2</td> <td>2</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td> <td>-</td> <td>0.3</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>GlobalAveragePooling1D</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
+  </tr>
+  <tr>
+    <td>Dense</td> <td><i>num_class</i></td> <td>-</td> <td>-</td> <td>Softmax</td>
+  </tr>
+</table>
 </div>
