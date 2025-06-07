@@ -89,35 +89,39 @@
   </p>
   <p align="justify"> The local spatial path specializes in extracting fine-grained regional features, and the detailed specifications including kernel sizes, strides, number of filters etc. are discussed in <strong> Table 3 </strong>. </p>
   <table>
-    <caption> Table 3: Specifications of the local spatial path. </caption>
-    <tr>
-      <th> Layer </th> <th> Units </th> <th> Size </th> <th> Strides </th> <th> Activation </th>
-    </tr>
-    <tr>
-      <th> Conv1D </th> <th> 16 </th> <th> 5 </th> <th> 2 </th> <th> ReLU </th>
-    </tr>
-    <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 3 </th> <th> 1 </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> Conv1D </th> <th> 16 </th> <th> 3 </th> <th> 2 </th> <th> ReLU </th>
-    </tr>
-    <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 3 </th> <th> 1 </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
-    </tr>
-  </table>
+  <caption><b>Table 3:</b> Specifications of the local spatial path.</caption>
+  <tr>
+    <th>Layer</th>
+    <th>Units</th>
+    <th>Size</th>
+    <th>Strides</th>
+    <th>Activation</th>
+  </tr>
+  <tr>
+    <td>Conv1D</td><td>16</td><td>5</td><td>2</td><td>ReLU</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td><td>-</td><td>-</td><td>-</td><td>-</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td><td>-</td><td>3</td><td>1</td><td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td><td>-</td><td>0.3</td><td>-</td><td>-</td>
+  </tr>
+  <tr>
+    <td>Conv1D</td><td>16</td><td>3</td><td>2</td><td>ReLU</td>
+  </tr>
+  <tr>
+    <td>BatchNormalization</td><td>-</td><td>-</td><td>-</td><td>-</td>
+  </tr>
+  <tr>
+    <td>MaxPooling1D</td><td>-</td><td>3</td><td>1</td><td>-</td>
+  </tr>
+  <tr>
+    <td>Dropout</td><td>-</td><td>0.3</td><td>-</td><td>-</td>
+  </tr>
+</table>
     <p align="justify"> The corresponding ouputs from these three parallel paths are x from local spatial, y from global spatial, and z from spatio-temporal paths. </p>
   <h3 align="center">Parallel Encoder Paths</h3>
   <p align="justify"> The parallel encoder paths comprises two distinct parallel paths.
@@ -142,44 +146,26 @@
   <i>h<sub>1</sub> = h<sub>0</sub> + concat(&tau;(&tau;(h<sub>0</sub>)), &eta;(h<sub>0</sub>))</i>.
 </p>
 <table>
-    <caption> Table 4: Specifications of the path <i>&tau;(.)</i>. </caption>
-    <tr>
-      <th> Layer </th> <th> Units </th> <th> Size </th> <th> Strides </th> <th> Activation </th>
-    </tr>
-    <tr>
-      <th> Conv1D </th> <th> 32 </th> <th> 3 </th> <th> 1 </th> <th> ReLU </th>
-    </tr>
-    <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 1 </th> <th> 1 </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> Conv1D </th> <th> 24 </th> <th> 3 </th> <th> 1 </th> <th> ReLU </th>
-    </tr>
-    <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 1 </th> <th> 1 </th> <th> - </th>
-    </tr>
-  </table>
-  <table>
-    <caption> Table 5: Specifications of the path <i>&eta;(.)</i>. </caption>
-    <tr>
-      <th> Layer </th> <th> Units </th> <th> Size </th> <th> Strides </th> <th> Activation </th>
-    </tr>
-    <tr>
-      <th> Conv1D </th> <th> 24 </th> <th> 3 </th> <th> 1 </th> <th> ReLU </th>
-    </tr>
-    <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 1 </th> <th> 1 </th> <th> - </th>
-    </tr>
-  </table>
+  <caption><b>Table 4:</b> Specifications of the path <i>&tau;(.)</i>.</caption>
+  <tr>
+    <th>Layer</th><th>Units</th><th>Size</th><th>Strides</th><th>Activation</th>
+  </tr>
+  <tr><td>Conv1D</td><td>32</td><td>3</td><td>1</td><td>ReLU</td></tr>
+  <tr><td>BatchNormalization</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>MaxPooling1D</td><td>-</td><td>1</td><td>1</td><td>-</td></tr>
+  <tr><td>Conv1D</td><td>24</td><td>3</td><td>1</td><td>ReLU</td></tr>
+  <tr><td>BatchNormalization</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>MaxPooling1D</td><td>-</td><td>1</td><td>1</td><td>-</td></tr>
+</table>
+<table>
+  <caption><b>Table 5:</b> Specifications of the path <i>&eta;(.)</i>.</caption>
+  <tr>
+    <th>Layer</th><th>Units</th><th>Size</th><th>Strides</th><th>Activation</th>
+  </tr>
+  <tr><td>Conv1D</td><td>24</td><td>3</td><td>1</td><td>ReLU</td></tr>
+  <tr><td>BatchNormalization</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>MaxPooling1D</td><td>-</td><td>1</td><td>1</td><td>-</td></tr>
+</table>
 <p align="justify">
   The outputs of the two paths are concatenated and connected through a skip connection. 
   A pointwise convolution (i.e., kernel size = 1) is applied to the skip connection to match the dimensionality of the output tensors. 
@@ -190,32 +176,22 @@
   The specific configurations and operations within this block are summarized in Table 6.
 </p>
 <table>
-    <caption> Table 6: Specifications of the feature recalibration block. </caption>
-    <tr>
-      <th> Layer </th> <th> Units </th> <th> Size </th> <th> Strides </th> <th> Activation </th>
-    </tr>
-    <tr>
-      <th> Conv1D </th> <th> 48 </th> <th> 1 </th> <th> 1 </th> <th> None </th>
-    </tr>
-    <tr>
-      <th> gelu </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> LayerNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> GlobalAveragePooling1D </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> Dense </th> <th> 12 </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> ReLU </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> sigmoid </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-  </table>
+  <caption><b>Table 6:</b> Specifications of the feature recalibration block.</caption>
+  <tr>
+    <th>Layer</th>
+    <th>Units</th>
+    <th>Size</th>
+    <th>Strides</th>
+    <th>Activation</th>
+  </tr>
+  <tr><td>Conv1D</td><td>48</td><td>1</td><td>1</td><td>None</td></tr>
+  <tr><td>gelu</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>LayerNormalization</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>GlobalAveragePooling1D</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>Dense</td><td>12</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>ReLU</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>sigmoid</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+</table>
   <p align="justify">
   After the sigmoid layer, the output is reshaped to a dimension of (1, 48). 
   This reshaped output is then multiplied with the output from the LayerNormalization layer. 
@@ -226,35 +202,23 @@
   The parameters and configuration details of this block are summarized in Table 7.
 </p>
 <table>
-    <caption> Table 7: Specifications of the feed-forward block</i>. </caption>
-    <tr>
-      <th> Layer </th> <th> Units </th> <th> Size </th> <th> Strides </th> <th> Activation </th>
-    </tr>
-    <tr>
-      <th> Conv1D </th> <th> 16 </th> <th> 5 </th> <th> 1 </th> <th> ReLU </th>
-    </tr>
-    <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 3 </th> <th> 1 </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> Conv1D </th> <th> 48 </th> <th> 3 </th> <th> 1 </th> <th> ReLU </th>
-    </tr>
-    <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 3 </th> <th> 1 </th> <th> - </th>
-    </tr>
-    <tr>
-      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
-    </tr>
-  </table>
+  <caption><b>Table 7:</b> Specifications of the feed-forward block.</caption>
+  <tr>
+    <th>Layer</th>
+    <th>Units</th>
+    <th>Size</th>
+    <th>Strides</th>
+    <th>Activation</th>
+  </tr>
+  <tr><td>Conv1D</td><td>16</td><td>5</td><td>1</td><td>ReLU</td></tr>
+  <tr><td>BatchNormalization</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>MaxPooling1D</td><td>-</td><td>3</td><td>1</td><td>-</td></tr>
+  <tr><td>Dropout</td><td>-</td><td>0.3</td><td>-</td><td>-</td></tr>
+  <tr><td>Conv1D</td><td>48</td><td>3</td><td>1</td><td>ReLU</td></tr>
+  <tr><td>BatchNormalization</td><td>-</td><td>-</td><td>-</td><td>-</td></tr>
+  <tr><td>MaxPooling1D</td><td>-</td><td>3</td><td>1</td><td>-</td></tr>
+  <tr><td>Dropout</td><td>-</td><td>0.3</td><td>-</td><td>-</td></tr>
+</table>
 <p align="justify">
   Subsequently, the remaining processing steps follow the structure of standard transformer architectures and yield <i>h<sub>2</sub></i>.
 </p>
