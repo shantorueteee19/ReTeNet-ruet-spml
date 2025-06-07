@@ -85,5 +85,36 @@
       <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
     </tr>
   </table>
+  <p align="justify"> The first convolutional layer with a kernel size of 33 facilitates the extraction of long-range dependencies from the BVP signals, while the subsequent convolutional layer with a smaller kernel size of 5 fine-tunes the extracted features. This hierarchical design reduces convolutional parameters and enables efficient global feature representation. </p>
   </p>
+  <p align="justify"> The local spatial path specializes in extracting fine-grained regional features, and the detailed specifications including kernel sizes, strides, number of filters etc. are discussed in <strong> Table 3 </strong>. </p>
+  <table>
+    <caption> Table 3: Specifications of the local spatial path. </caption>
+    <tr>
+      <th> Layer </th> <th> Units </th> <th> Size </th> <th> Strides </th> <th> Activation </th>
+    </tr>
+    <tr>
+      <th> Conv1D </th> <th> 16 </th> <th> 5 </th> <th> 2 </th> <th> ReLU </th>
+    </tr>
+    <tr>
+      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
+    </tr>
+    <tr>
+      <th> MaxPooling1D </th> <th> - </th> <th> 3 </th> <th> 1 </th> <th> - </th>
+    </tr>
+    <tr>
+      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
+    </tr>
+    <tr>
+      <th> Conv1D </th> <th> 16 </th> <th> 3 </th> <th> 2 </th> <th> ReLU </th>
+    </tr>
+    <tr>
+      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
+    </tr>
+    <tr>
+      <th> MaxPooling1D </th> <th> - </th> <th> 3 </th> <th> 1 </th> <th> - </th>
+    </tr>
+    <tr>
+      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
+    </tr>
 </div>
