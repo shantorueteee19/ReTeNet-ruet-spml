@@ -27,31 +27,31 @@
       <th> Layer </th> <th> Units </th> <th> Size </th> <th> Strides </th> <th> Activation </th>
     </tr>
     <tr>
-      <th> Conv1D </th> <th> 16 </th> <th> 3 </th> <th> 2 </th> <th> ReLU </th>
+      <td> Conv1D </td> <td> 16 </td> <td> 3 </td> <td> 2 </td> <td> ReLU </td>
     </tr>
     <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
+      <td> BatchNormalization </td> <td> - </td> <td> - </td> <td> - </td> <td> - </td>
     </tr>
     <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 3 </th> <th> 1 </th> <th> - </th>
+      <td> MaxPooling1D </td> <td> - </td> <td> 3 </td> <td> 1 </td> <td> - </td>
     </tr>
     <tr>
-      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
+      <td> Dropout </td> <td> - </td> <td> 0.3 </td> <td> - </td> <td> - </td>
     </tr>
     <tr>
-      <th> LSTM </th> <th> 16 </th> <th> - </th> <th> - </th> <th> - </th>
+      <td> LSTM </td> <td> 16 </td> <td> - </td> <td> - </td> <td> - </td>
     </tr>
     <tr>
-      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
+      <td> Dropout </td> <td> - </td> <td> 0.3 </td> <td> - </td> <td> - </td>
     </tr>
     <tr>
-      <th> BiLSTM </th> <th> 16 </th> <th> - </th> <th> - </th> <th> - </th>
+      <td> BiLSTM </td> <td> 16 </td> <td> - </td> <td> - </td> <td> - </td>
     </tr>
     <tr>
-      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
+      <td> Dropout </td> <td> - </td> <td> 0.3 </td> <td> - </td> <td> - </td>
     </tr>
     <tr>
-      <th> Conv1D </th> <th> 16 </th> <th> 1 </th> <th> 2 </th> <th> ReLU </th>
+      <td> Conv1D </td> <td> 16 </td> <td> 1 </td> <td> 2 </td> <td> ReLU </td>
     </tr>
   </table>
   Now, <strong> Table 2 </strong> thoroughly illustrates the specifications of the global spatial path.
@@ -61,28 +61,28 @@
       <th> Layer </th> <th> Units </th> <th> Size </th> <th> Strides </th> <th> Activation </th>
     </tr>
     <tr>
-      <th> Conv1D </th> <th> 16 </th> <th> 33 </th> <th> 2 </th> <th> ReLU </th>
+      <td> Conv1D </td> <td> 16 </td> <td> 33 </td> <td> 2 </td> <td> ReLU </td>
     </tr>
     <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
+      <td> BatchNormalization </td> <td> - </td> <td> - </td> <td> - </td> <td> - </td>
     </tr>
     <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 3 </th> <th> 1 </th> <th> - </th>
+      <td> MaxPooling1D </td> <td> - </td> <td> 3 </td> <td> 1 </td> <td> - </td>
     </tr>
     <tr>
-      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
+      <td> Dropout </td> <td> - </td> <td> 0.3 </td> <td> - </td> <td> - </td>
     </tr>
     <tr>
-      <th> Conv1D </th> <th> 16 </th> <th> 5 </th> <th> 2 </th> <th> ReLU </th>
+      <td> Conv1D </td> <th> 16 </td> <td> 5 </td> <td> 2 </td> <td> ReLU </td>
     </tr>
     <tr>
-      <th> BatchNormalization </th> <th> - </th> <th> - </th> <th> - </th> <th> - </th>
+      <td> BatchNormalization </td> <td> - </td> <td> - </td> <td> - </td> <td> - </td>
     </tr>
     <tr>
-      <th> MaxPooling1D </th> <th> - </th> <th> 3 </th> <th> 1 </th> <th> - </th>
+      <td> MaxPooling1D </td> <td> - </td> <td> 3 </td> <td> 1 </td> <td> - </td>
     </tr>
     <tr>
-      <th> Dropout </th> <th> - </th> <th> 0.3 </th> <th> - </th> <th> - </th>
+      <td> Dropout </td> <td> - </td> <td> 0.3 </td> <td> - </td> <td> - </td>
     </tr>
   </table>
   <p align="justify"> The first convolutional layer with a kernel size of 33 facilitates the extraction of long-range dependencies from the BVP signals, while the subsequent convolutional layer with a smaller kernel size of 5 fine-tunes the extracted features. This hierarchical design reduces convolutional parameters and enables efficient global feature representation. </p>
