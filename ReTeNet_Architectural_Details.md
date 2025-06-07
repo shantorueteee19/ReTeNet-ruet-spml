@@ -384,7 +384,7 @@
     <td>GlobalAveragePooling1D</td> <td>-</td> <td>-</td> <td>-</td> <td>-</td>
   </tr>
   <tr>
-    <td>Dense</td> <td><i>num_class</i></td> <td>-</td> <td>-</td> <td>Softmax</td>
+    <td>Dense</td> <td><i>2</i></td> <td>-</td> <td>-</td> <td>Softmax</td>
   </tr>
 </table>
 </div>
