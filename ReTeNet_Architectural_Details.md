@@ -378,7 +378,7 @@
 <table>
   <caption><b>Table 11:</b> Specifications of the Classification Stage.</caption>
   <tr>
-    <th>Layer</th> <th>Filters/Units</th> <th>Kernel Size / Pool Size</th> <th>Strides</th> <th>Activation</th>
+    <th>Layer</th> <th>Units</th> <th>Kernel</th> <th>Strides</th> <th>Activation</th>
   </tr>
   <tr>
     <td>Conv1D</td> <td>64</td> <td>3</td> <td>1</td> <td>ReLU</td>
