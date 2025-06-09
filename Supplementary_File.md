@@ -18,7 +18,9 @@
     <li>End</li>
   </ol>
 </div>
-
+<p align="justify">
+    The recording procedures ensure consistency across all participants and task conditions, supporting accurate and reliable data collection. A detailed description of the tasks is provided below.
+  </p>
 <h1 align="center">Detailed Architecture of ReTeNet</h1>
 
 <div style="text-align: justify; line-height: 1.6; font-family: 'Arial', sans-serif;">
