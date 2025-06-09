@@ -1,3 +1,22 @@
+<h1 align="center">Detailed Protocol for RUET SPML Data Collection</h1>
+
+<div style="text-align: justify; line-height: 1.6; font-family: 'Arial', sans-serif;">
+  <h3>Task Recording Algorithm</h3>
+
+  <ol>
+    <li>Start recording</li>
+    <li>Initialize counter <code>i = 0</code></li>
+    <li>Repeat while <code>i ≤ 3</code>:
+      <ol type="a">
+        <li>Record <strong>Task-i</strong> for 3 minutes</li>
+        <li>Wait for 30 seconds (interval)</li>
+        <li>Increment <code>i</code> by 1 (<code>i = i + 1</code>)</li>
+      </ol>
+    </li>
+    <li>End</li>
+  </ol>
+</div>
+
 <h1 align="center">Detailed Architecture of ReTeNet</h1>
 
 <div style="text-align: justify; line-height: 1.6; font-family: 'Arial', sans-serif;">
