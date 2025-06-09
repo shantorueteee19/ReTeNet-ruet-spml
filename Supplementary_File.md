@@ -2,7 +2,9 @@
 
 <div style="text-align: justify; line-height: 1.6; font-family: 'Arial', sans-serif;">
   <h3>Task Recording Algorithm</h3>
-
+  <p align="justify">
+    The RUET SPML dataset includes four protocols including baseline, stroop, simple problem solving tasks, and sudoku tests. The protocols are recorded following the algorithm described below.
+  </p>
   <ol>
     <li>Start recording</li>
     <li>Initialize counter <code>i = 0</code></li>
