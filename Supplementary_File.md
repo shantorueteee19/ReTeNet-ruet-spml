@@ -27,6 +27,10 @@
     <li><strong>Task-2:</strong><p align="justify">The next cognitive load was applied through a logical task [7], which involved a series of low-complexity intelligence questions (IQs) and arithmetic problems. These tasks were specifically designed to be completed within a set time limit, challenging participants to process information and make decisions quickly.</p></li>
     <li><strong>Task-3:</strong><p align="justify">The final assessment involved a Sudoku task, incorporating stress induction techniques inspired by the methods outlined in studies by Chen et al. [8], Gergelyfi et al. [9], and Weiqi et al. [10]. This task requires significant cognitive engagement, thereby acting as a source of mental stress. Participants were tasked with solving a 9 × 9 grid puzzle, where the objective was to fill the grid with digits from 1 to 9, ensuring that each digit appeared only once in every row and column.</p></li>
   </ol>
+<h3 align="center">Potential Limitations of the RUET SPML Dataset</h3>
+<p align="justify">
+    The limitations of this dataset include the lack of participant diversity, as most subjects were affiliated with academia. Additionally, the participants were concentrated within a specific age group, which may not fully represent the broader population. This homogeneity limits the generalizability of the findings to a wider range of individuals.
+  </p>
 <h1 align="center">Detailed Architecture of ReTeNet</h1>
 
 <div style="text-align: justify; line-height: 1.6; font-family: 'Arial', sans-serif;">
