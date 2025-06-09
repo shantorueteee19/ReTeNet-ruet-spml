@@ -21,6 +21,12 @@
 <p align="justify">
     The recording procedures ensure consistency across all participants and task conditions, supporting accurate and reliable data collection. A detailed description of the tasks is provided below.
   </p>
+  <ol type="a" style="margin: 12px 0; padding-left: 30px;">
+    <li><strong>Task-0:</strong><p align="justify">Prior to the application of any experimental stimuli, a 3-minute baseline data recording was conducted, as outlined in previous studies [1], [2], [3], [4]. Participants were instructed to remain in a relaxed state. The baseline data serves as a reference point for assessing physiological responses to stress-induced tasks.</p></li>
+    <li><strong>Task-1:</strong><p align="justify">Following the baseline session, participants completed the Stroop test, adhering to protocols described in [5] and adapted as outlined in [6]. This test evaluates cognitive interference by measuring the interaction between two factors: the color of the stimulus (the ink color of the word) and the semantic meaning of the word itself [6]. Participants were presented with a series of colour names printed in incongruent ink colours and were instructed to identify the ink colour while disregarding the word's meaning.</p></li>
+    <li><strong>Task-2:</strong><p align="justify">The next cognitive load was applied through a logical task [7], which involved a series of low-complexity intelligence questions (IQs) and arithmetic problems. These tasks were specifically designed to be completed within a set time limit, challenging participants to process information and make decisions quickly.</p></li>
+    <li><strong>Task-3:</strong><p align="justify">The final assessment involved a Sudoku task, incorporating stress induction techniques inspired by the methods outlined in studies by Chen et al. [8], Gergelyfi et al. [9], and Weiqi et al. [10]. This task requires significant cognitive engagement, thereby acting as a source of mental stress. Participants were tasked with solving a 9 × 9 grid puzzle, where the objective was to fill the grid with digits from 1 to 9, ensuring that each digit appeared only once in every row and column.</p></li>
+  </ol>
 <h1 align="center">Detailed Architecture of ReTeNet</h1>
 
 <div style="text-align: justify; line-height: 1.6; font-family: 'Arial', sans-serif;">
@@ -411,3 +417,54 @@
   </tr>
 </table>
 </div>
+<h2>References</h2>
+  <ol>
+    <li>
+      P. Schmidt, A. Reiss, R. Duerichen, C. Marberger, and K. Van Laerhoven,
+      "<em>Introducing WESAD, a multimodal dataset for wearable stress and affect detection</em>."
+      pp. 400–408.
+    </li>
+    <li>
+      W.-K. Beh, and Y.-H. Wu,
+      "<em>MAUS: A dataset for mental workload assessment on N-back task using wearable sensor</em>,"
+      <strong>arXiv preprint</strong> arXiv:2111.02561, 2021.
+    </li>
+    <li>
+      V. Markova, T. Ganchev, and K. Kalinkov,
+      "<em>CLAS: A database for cognitive load, affect and stress recognition</em>."
+      pp. 1–4.
+    </li>
+    <li>
+      I. Albuquerque, A. Tiwari, M. Parent, R. Cassani, J.-F. Gagnon, D. Lafond, S. Tremblay, and T. H. Falk,
+      "<em>WAUC: A multi-modal database for mental workload assessment under physical activity</em>,"
+      <strong>Frontiers in Neuroscience</strong>, vol. 14, pp. 549524, 2020.
+    </li>
+    <li>
+      J. R. Stroop,
+      "<em>Studies of interference in serial verbal reactions</em>,"
+      <strong>Journal of Experimental Psychology</strong>, vol. 18, no. 6, pp. 643, 1935.
+    </li>
+    <li>
+      W. Rauch, and K. Schmitt,
+      "<em>Fatigue of cognitive control in the Stroop-task</em>."
+    </li>
+    <li>
+      P. Kalra, and V. Sharma,
+      "<em>Mental stress assessment using PPG signal: A deep neural network approach</em>,"
+      <strong>IETE Journal of Research</strong>, vol. 69, no. 2, pp. 879–885, 2023.
+    </li>
+    <li>
+      Q. Chen, and B. G. Lee,
+      "<em>Deep learning models for stress analysis in university students: A Sudoku-based study</em>,"
+      <strong>Sensors</strong>, vol. 23, no. 13, pp. 6099, 2023.
+    </li>
+    <li>
+      M. Gergelyfi, B. Jacob, E. Olivier, and A. Zénon,
+      "<em>Dissociation between mental fatigue and motivational state during prolonged mental activity</em>,"
+      <strong>Frontiers in Behavioral Neuroscience</strong>, vol. 9, pp. 176, 2015.
+    </li>
+    <li>
+      H. Weiqi, F. Y. Kai, C. Zhi-En, A. A. P. Wai, and C. Sher-Yi,
+      "<em>Multimodal Sensory Headband for Personalized Relaxation Management</em>."
+    </li>
+  </ol>
