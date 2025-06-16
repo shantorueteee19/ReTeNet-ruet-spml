@@ -9,7 +9,7 @@
 <b> Contact author:</b></br>
 <p align="justify">
   Dr. Mohammod Abdul Motin<br>
-  <i> Assistant Professor</i><br>
+  <i> Associate Professor</i><br>
   Dept. of EEE, RUET, Rajshahi, 6204, Bangladesh <br>
   E-mail: m.a.motin@ieee.org
 </p>
