@@ -3,7 +3,7 @@ from tensorflow.keras.layers import (
     Conv1D, MaxPooling1D, BatchNormalization, Dropout,
     Dense, GlobalAveragePooling1D, Reshape, Multiply, Add, concatenate, Input,
     ReLU, Softmax, LayerNormalization, LSTM, Bidirectional, MultiHeadAttention,
-    GlobalAveragePooling1D
+    GlobalAveragePooling1D, Concatenate
 )
 from tensorflow.keras.models import Model
 from tensorflow.keras.activations import gelu, sigmoid
@@ -40,4 +40,5 @@ def ReTeNet(input_shape, num_class):
   x_concat = GlobalAveragePooling1D()(x_concat)
   out = Dense(units=num_class, activation='softmax')(x_concat)
   model = Model(inputs=input_layer, outputs=out)
+
   return model
